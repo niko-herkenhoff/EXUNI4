@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Uni4Exe03 {
+    public static void main(String[] args) {
+        int num1, num2;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número inteiro: ");
+        num1 = sc.nextInt();
+
+        System.out.print("Digite o segundo número inteiro: ");
+        num2 = sc.nextInt();
+
+        if (num1 > num2) {
+            System.out.println("O valor " + num1 + " é maior do que o valor " + num2);
+        } else if (num2 > num1) {
+            System.out.println("O valor " + num2 + " é maior do que o valor " + num1);
+        } else {
+            System.out.println("Os dois valores são iguais.");
+        }
+
+        sc.close();
+    }
+}
