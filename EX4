@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Uni4Exe04 {
+    public static void main(String[] args) {
+        double numero;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite um número maior do que 0: ");
+        numero = sc.nextDouble();
+
+        if (numero % 1 == 0) {
+            System.out.println("Casas decimais não foram digitadas.");
+        } else {
+            System.out.println("Casas decimais foram digitadas.");
+        }
+
+        sc.close();
+    }
+}
