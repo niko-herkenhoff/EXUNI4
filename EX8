@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Uni4Exe08 {
+    public static void main(String[] args) {
+        char letra;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Informe a letra: ");
+        letra = sc.next().charAt(0);
+
+        // converte para minúscula para simplificar a comparação
+        letra = Character.toLowerCase(letra);
+
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+            System.out.println("É vogal");
+        } else {
+            System.out.println("NÃO é vogal");
+        }
+
+        sc.close();
+    }
+}
