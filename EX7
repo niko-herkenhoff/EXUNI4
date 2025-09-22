@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Uni4Exe07 {
+    public static void main(String[] args) {
+        int peso;
+        double valorPagar;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Entre com o peso da carta (em gramas): ");
+        peso = sc.nextInt();
+
+        if (peso <= 50) {
+            valorPagar = 0.45;
+        } else {
+            int pesoExcedido = peso - 50;
+            int qAdicional = (pesoExcedido / 20) + 1; // sempre arredonda pra cima na fração
+            valorPagar = 0.45 + (0.45 * qAdicional);
+        }
+
+        System.out.printf("Custo do selo: %.4f\n", valorPagar);
+
+        sc.close();
+    }
+}
