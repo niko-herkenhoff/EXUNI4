@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Uni4Exe11 {
+    public static void main(String[] args) {
+        int idade1, idade2, idade3;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite a idade do primeiro irmão: ");
+        idade1 = sc.nextInt();
+
+        System.out.print("Digite a idade do segundo irmão: ");
+        idade2 = sc.nextInt();
+
+        System.out.print("Digite a idade do terceiro irmão: ");
+        idade3 = sc.nextInt();
+
+        if (idade1 == idade2 && idade2 == idade3) {
+            System.out.println("TRIGÊMEOS");
+        } else if (idade1 == idade2 || idade1 == idade3 || idade2 == idade3) {
+            System.out.println("GÊMEOS");
+        } else {
+            System.out.println("APENAS IRMÃOS");
+        }
+
+        sc.close();
+    }
+}
