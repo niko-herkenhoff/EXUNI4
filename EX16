@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Uni4Exe16 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Digite a idade do primeiro homem: ");
+        int homem1 = teclado.nextInt();
+        System.out.print("Digite a idade do segundo homem: ");
+        int homem2 = teclado.nextInt();
+
+        System.out.print("Digite a idade da primeira mulher: ");
+        int mulher1 = teclado.nextInt();
+        System.out.print("Digite a idade da segunda mulher: ");
+        int mulher2 = teclado.nextInt();
+
+        int homemMaisVelho, homemMaisNovo;
+        if (homem1 > homem2) {
+            homemMaisVelho = homem1;
+            homemMaisNovo = homem2;
+        } else {
+            homemMaisVelho = homem2;
+            homemMaisNovo = homem1;
+        }
+
+        int mulherMaisVelha, mulherMaisNova;
+        if (mulher1 > mulher2) {
+            mulherMaisVelha = mulher1;
+            mulherMaisNova = mulher2;
+        } else {
+            mulherMaisVelha = mulher2;
+            mulherMaisNova = mulher1;
+        }
+
+        int soma = homemMaisVelho + mulherMaisNova;
+        int produto = homemMaisNovo * mulherMaisVelha;
+
+        System.out.println("Soma das idades (homem mais velho + mulher mais nova): " + soma);
+        System.out.println("Produto das idades (homem mais novo * mulher mais velha): " + produto);
+
+        teclado.close();
+    }
+}
